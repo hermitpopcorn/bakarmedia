@@ -1,0 +1,11 @@
+Options -Indexes
+RewriteEngine on
+RewriteCond $1 !^(index\.php|assets|preview|files|robots\.txt)
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+php_value upload_max_filesize 33554432
+php_value post_max_size 33554432
+php_value max_execution_time 6000
+php_value max_input_time 6000
+
+Allow from all
